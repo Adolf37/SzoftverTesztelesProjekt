@@ -11,7 +11,7 @@ em = EmployeeManager(rm)
 #print(em.calculate_salary(everybody[1]))
 
 def test_salaryNotTeamLeaderHireDate_10_10_1998_BaseSalary1000():
-    #Make sure the returned value is 3000$ (1000$ + 20 X 100$)
+    
     outputHireDate = False
     outputBaseSalary = False
     finalOutput = False
@@ -30,3 +30,28 @@ def test_salaryNotTeamLeaderHireDate_10_10_1998_BaseSalary1000():
         finalOutput = True
     
     assert finalOutput == True, "No person who match the requirments"
+
+def test_teamLeader_3Members_HireDate10_10_2008_BaseSalary_2000():
+    output3Member = False
+    outputHireDate = False
+    outputBaseSalary = False
+    finalOutput = False
+    hireDatecheck = datetime.date(2008,10,10)
+    for i in everybody:
+
+        if rm.get_team_members(i) != None:
+            if len(rm.get_team_members(i)) == 3:
+                output3Member = True
+
+        if i.hire_date == hireDatecheck:
+            outputHireDate = True
+        
+        if i.base_salary == 2000:
+            outputBaseSalary = True
+
+        if output3Member == outputBaseSalary == outputBaseSalary == True:
+            finalOutput = True
+    
+    assert finalOutput == True, "Don't have a person who satisfy the requirments"
+
+

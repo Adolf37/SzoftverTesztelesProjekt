@@ -1,1 +1,8 @@
-tanulas
+What is __pycache__:
+    Python is an interpreted language => source code -> set of instructions(bytecode) for the CPU in runtime
+    The bytecode is also cached and stored in .pyc files so that the next time you 
+    re-run the code the execution of the same file will be faster.
+    .pyc bytecode files sharing the same names as your .py files
+    code modification => new bytecode files will be created again
+        - some occasions this may not be true and Python will execute the code using cached files causing you some troubles
+        -delete the __pycache__ For instance, you may have fixed a bug but Python may be running on a buggy cached version 

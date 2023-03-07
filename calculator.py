@@ -7,3 +7,4 @@ def multiply(a,b):
 def substract(a,b):
     return a - b
 
+#itt tortene valami modositas

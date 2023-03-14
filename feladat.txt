@@ -16,7 +16,3 @@ Check an employee’s salary who is not a team leader whose hire date is 10.10.1
 Check an employee’s salary who is a team leader and his team consists of 3 members. OK (FAILED)
         She was hired on 10.10.2008 and has a base salary of 2000$.
         
-
-Make sure that when you calculate the salary and send an email notification, the respective email 
-        sender service is used with the correct information (name and message).
-        You can use the setup from the previous test for the employee.
